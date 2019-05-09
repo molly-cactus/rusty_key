@@ -14,6 +14,123 @@ I have nothing but respect for the Rust Lang Team's work, and their proposal reg
 
 Don't?
 
+If you really want to, start with this:
+
+```ruby
+require 'rusty'
+
+Rusty.using
+```
+
+Below are some things you can do, but it's not an exhaustive list. Consider using braces rather than `do` and `end` to heighten the effect.
+
+# Define methods
+```ruby
+:foo.def { |x, y, *zs, key: value, &block|
+  # stuff
+}
+```
+
+# Define and monkey patch classes
+```ruby
+:Dog.class {
+  :initialize.def { |color|
+    # stuff
+  }
+
+  :bark.def {
+    "wruff!"
+  }
+}
+```
+
+# Define and monkey patch modules
+```ruby
+:PrettyBow.module {
+  # stuff
+}
+```
+# alias, include, extend, using
+```ruby
+:Rusty.using
+```
+```ruby
+:f.def { |x|
+  # stuff
+}
+:func.alias :f
+```
+```ruby
+:String.class {
+  :Cheese.include
+  :Kite.extend
+}
+```
+
+# Flow control
+```ruby
+-> { expensive() }.if(necessary?)
+  .else_if(cheap_check) { one_thing() }
+  .elsif(-> { expensive_check }) { another_thing() }
+  .else! { go_to_sleep() }
+```
+
+# Boolean logic
+```ruby
+false.or { true } # => true
+false.and { expensive } # => false
+```
+
+# Case expressions
+```ruby
+x.case
+  .when(String) { "It's a string!" }
+  .when(0..10) { "Pretty small..." }
+  .when(-> y { y.respond_to? :phone }) { "Hello? }
+  .else { go_to_sleep() } 
+```
+
+# Raise and handle exceptions
+```ruby
+-> {
+  ArgumentError.new("no arguing!").raise
+}.rescue(OtherError, DifferentError) { |e|
+  # not called
+}.rescue(ArgumentError) { |e|
+  puts "Please don't argue!"
+}.rescue(Exception) { |e|
+  # already caught, so this isn't called
+}.ensure! {
+  puts "Thank you for following the rules."
+}
+```
+```ruby
+# raises RuntimeError, like `raise "msg"`
+"something's wrong!".raise
+```
+
+# return and yield
+```ruby
+:f.def { |x|
+  -> { x / 3 }.return_if(x > 10) # guard clause
+  (x * 3).return # explicit return
+}
+```
+```ruby
+:takes_block.def { |&block|
+  25.yield # yields 25 to block
+}
+```
+
+## Caveats
+
+* Nested classes (and possibly other nested things) don't work.
+* There's no replacement for `refine`.
+* for `#if` and `#elsif`/`#else_if`, wrap conditions in procs or they will always get evaluated.
+* Specifically the class `Module` can't be monkey patched this way, or at least it couldn't at some point. Haven't tested that in a while.
+* Speaking of which: There are no automated tests. I didn't think this would continue to the point where I might need them; I was wrong.
+* Use return_if and return_unless for conditional returns (e.g. guard clauses) unless you're very comfortable with the difference in semantics between regular procs and lambdas.
+
 ## Acknowledgements
 
 I'd like to thank:
