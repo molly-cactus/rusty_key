@@ -14,7 +14,13 @@ I have nothing but respect for the Rust Lang Team's work, and their proposal reg
 
 Don't?
 
-If you really want to, start with this:
+If you really want to, get it like this:
+
+```bash
+gem install rusty_key
+```
+
+Then start with this:
 
 ```ruby
 require 'rusty_key'
