@@ -133,7 +133,7 @@ x.case
 * For `#elsif`/`#else_if`, wrap conditions in procs or they will always get evaluated.
 * Specifically the class `Module` can't be monkey patched this way, or at least it couldn't at some point. Haven't tested that in a while.
 * Speaking of which: There are no automated tests. I didn't think this would continue to the point where I might need them; I was wrong.
-* Use return_if and return_unless for conditional returns (e.g. guard clauses) unless you're very comfortable with the difference in semantics between regular procs and lambdas.
+* Use `#return_if` and `#return_unless` for conditional returns (e.g. guard clauses) unless you're very comfortable with the difference in semantics between regular procs and lambdas.
 
 ## Acknowledgements
 
