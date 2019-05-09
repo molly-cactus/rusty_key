@@ -1,43 +1,27 @@
 # Rusty
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/rusty`. To experiment with that code, run `bin/console` for an interactive prompt.
+This gem replaces many keywords with more-or-less equivalent method calls.
 
-TODO: Delete this and the text above, and describe your gem
+## Why?
 
-## Installation
+I made a joke about Rust's proposed ["dot keyword" syntax](https://boats.gitlab.io/blog/post/await-decision/), namely that they should apply it to all their keywords.
 
-Add this line to your application's Gemfile:
+Then I took that joke too far.
 
-```ruby
-gem 'rusty'
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install rusty
+I have nothing but respect for the Rust Lang Team's work, and their proposal regarding the `await` keyword makes perfect sense to me. This is just a well-intentioned goof.
 
 ## Usage
 
-TODO: Write usage instructions here
-
-## Development
-
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+Don't?
 
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/rusty. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
-## License
+## Unlicense
 
-The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+This is free and unencumbered software released into the [public domain](http://unlicense.org).
 
 ## Code of Conduct
 
-Everyone interacting in the Rusty project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/rusty/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the Rusty project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/smoochbot/rusty/blob/master/CODE_OF_CONDUCT.md).
