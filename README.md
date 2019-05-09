@@ -79,7 +79,8 @@ computation.if(necessary?)
 ```
 
 # Boolean logic
-```ruby false.or { true } # => true
+```ruby
+false.or { true } # => true
 false.and { expensive } # => false
 ```
 
