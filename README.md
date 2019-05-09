@@ -80,8 +80,9 @@ computation.if(necessary?)
 
 # Boolean logic
 ```ruby
-false.or { true } # => true
-false.and { expensive } # => false
+false.or { true } # => truthy
+false.and { expensive } # => falsey
+400.and { 20 } # => truthy
 ```
 
 # Case expressions
