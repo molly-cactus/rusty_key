@@ -42,6 +42,8 @@ Below are some things you can do, but it's probably not an exhaustive list. Cons
     "wruff!"
   }
 }
+
+Dog.new(:green).bark # => "wruff!"
 ```
 
 # Define and monkey patch modules
@@ -77,8 +79,7 @@ computation.if(necessary?)
 ```
 
 # Boolean logic
-```ruby
-false.or { true } # => true
+```ruby false.or { true } # => true
 false.and { expensive } # => false
 ```
 
@@ -136,7 +137,7 @@ x.case
 
 I'd like to thank:
 
-* John Mair, whose [binding_of_caller gem](https://github.com/banister/binding_of_caller), released under the MIT license, makes all this possible.
+* John Mair, whose [binding_of_caller gem](https://github.com/banister/binding_of_caller), released under the MIT license, makes most of this possible.
 * The Rust Lang Team, who do great work and inspire terrible jokes.
 * Matz, who will hopefully not ban me from using Ruby for releasing this.
 
