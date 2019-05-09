@@ -71,11 +71,11 @@ Dog.new(:green).bark # => "wruff!"
 
 # Flow control
 ```ruby
-computation = -> { expensive() }
+computation = -> { expensive }
 computation.if(necessary?)
-  .else_if(cheap_check) { one_thing() }
-  .elsif(-> { expensive_check }) { another_thing() }
-  .else! { go_to_sleep() }
+  .else_if(cheap_check) { one_thing }
+  .elsif(-> { expensive_check }) { another_thing }
+  .else! { go_to_sleep }
 ```
 
 # Boolean logic
@@ -91,7 +91,7 @@ x.case
   .when(String) { "It's a string!" }
   .when(0..10) { "Pretty small..." }
   .when(-> y { y.respond_to? :phone }) { "Hello? }
-  .else { go_to_sleep() } 
+  .else { go_to_sleep } 
 ```
 
 # Raise and handle exceptions
