@@ -9,10 +9,9 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Margaret K. Geiger"]
   spec.email         = ["mkg@fastmail.com"]
 
-  spec.summary       = %q{}
-  spec.description   = %q{}
+  spec.summary       = %q{Replaces keywords with method calls.}
   spec.homepage      = "https://github.com/smoochbot/rusty"
-  spec.license       = "MIT"
+  spec.license       = "Public Domain"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
   # to allow pushing to a single host or delete this section to allow pushing to any host.
