@@ -1,4 +1,4 @@
-module Rusty
+module RustyKey
   refine Symbol do
     def def(&b)
       binding.of_caller(1).eval('self').send(:define_method, self, b || -> {})

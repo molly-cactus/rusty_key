@@ -1,4 +1,4 @@
-module Rusty
+module RustyKey
   refine Object do
     def case
       Case.new(self)

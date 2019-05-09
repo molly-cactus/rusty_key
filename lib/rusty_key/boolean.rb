@@ -1,4 +1,4 @@
-module Rusty
+module RustyKey
   refine Object do
     def and
       raise ArgumentError("Object#and requires a block") unless block_given?

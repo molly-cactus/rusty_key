@@ -1,6 +1,6 @@
 require 'binding_of_caller'
 
-module Rusty
+module RustyKey
   refine Exception do
     def raise
       id = self.object_id

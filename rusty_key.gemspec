@@ -1,16 +1,16 @@
 
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "rusty/version"
+require "rusty_key/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "rusty"
-  spec.version       = Rusty::VERSION
+  spec.name          = "rusty_key"
+  spec.version       = RustyKey::VERSION
   spec.authors       = ["Margaret K. Geiger"]
   spec.email         = ["mkg@fastmail.com"]
 
   spec.summary       = %q{Replaces keywords with method calls.}
-  spec.homepage      = "https://github.com/smoochbot/rusty"
+  spec.homepage      = "https://github.com/smoochbot/rusty_key"
   spec.license       = "Public Domain"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'

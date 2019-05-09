@@ -1,4 +1,4 @@
-module Rusty
+module RustyKey
   refine Object do
     def return
       id = self.object_id

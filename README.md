@@ -1,4 +1,4 @@
-# Rusty
+# rusty_key
 
 This gem replaces many keywords with more-or-less equivalent method calls.
 
@@ -17,9 +17,9 @@ Don't?
 If you really want to, start with this:
 
 ```ruby
-require 'rusty'
+require 'rusty_key'
 
-Rusty.using
+RustyKey.using
 ```
 
 Below are some things you can do, but it's probably not an exhaustive list. Consider using braces rather than `do` and `end` to heighten the effect.
@@ -54,7 +54,7 @@ Dog.new(:green).bark # => "wruff!"
 ```
 # using, alias, include, extend
 ```ruby
-:Rusty.using
+:RustyKey.using
 ```
 ```ruby
 :f.def { |x|

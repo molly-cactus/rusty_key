@@ -2,9 +2,9 @@
 
 # A demonstration of how to define classes, methods and aliases using rusty.
 
-require_relative '../lib/rusty.rb'
+require_relative '../lib/rusty_key.rb'
 
-Rusty.using
+RustyKey.using
 
 :StringBuilder.class {
   :initialize.def { |*strs|
@@ -24,8 +24,8 @@ Rusty.using
 
 sb = StringBuilder.new("This ", "is ")
 sb << "how "
-sb.append("rusty ") << "works."
+sb.append("rusty_", "key ") << "works."
 
 puts sb.to_s
-#=> This is how rusty works.
+#=> This is how rusty_key works.
 
