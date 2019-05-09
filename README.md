@@ -22,7 +22,7 @@ require 'rusty'
 Rusty.using
 ```
 
-Below are some things you can do, but it's not an exhaustive list. Consider using braces rather than `do` and `end` to heighten the effect.
+Below are some things you can do, but it's probably not an exhaustive list. Consider using braces rather than `do` and `end` to heighten the effect.
 
 # Define methods
 ```ruby
