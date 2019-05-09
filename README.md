@@ -108,6 +108,8 @@ x.case
   puts "Please don't argue!"
 }.rescue(Exception) { |e|
   # already caught, so this isn't called
+}.rescue { |e|
+  # catches any uncaught StandardError
 }.ensure! {
   puts "Thank you for following the rules."
 }
