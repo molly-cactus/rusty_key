@@ -1,11 +1,13 @@
 module Rusty
   refine Object do
-    def and(condition)
-      self && (condition.respond_to?(:call) ? condition.call : condition)
+    def and
+      raise ArgumentError("Object#and requires a block") unless block_given?
+      self && yield
     end
 
     def or
-      self || (condition.respond_to?(:call) ? condition.call : condition)
+      raise ArgumentError("Object#or requires a block") unless block_given?
+      self || yield
     end
 
     def if(condition)
