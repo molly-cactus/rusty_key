@@ -112,5 +112,9 @@ module Rusty
       self.else(&action)
       self.call
     end
+
+    def to_proc
+      -> { self.call }
+    end
   end
 end
