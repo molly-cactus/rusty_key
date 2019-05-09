@@ -30,14 +30,14 @@ RustyKey.using
 
 Below are some things you can do, but it's probably not an exhaustive list. Consider using braces rather than `do` and `end` to heighten the effect.
 
-# Define methods
+### Define methods
 ```ruby
 :foo.def { |x, y, *zs, key: value, &block|
   # stuff
 }
 ```
 
-# Define and monkey patch classes
+### Define and monkey patch classes
 ```ruby
 :Dog.class {
   :initialize.def { |color|
@@ -52,13 +52,13 @@ Below are some things you can do, but it's probably not an exhaustive list. Cons
 Dog.new(:green).bark # => "wruff!"
 ```
 
-# Define and monkey patch modules
+### Define and monkey patch modules
 ```ruby
 :PrettyBow.module {
   # stuff
 }
 ```
-# using, alias, include, extend
+### using, alias, include, extend
 ```ruby
 :RustyKey.using
 ```
@@ -75,7 +75,7 @@ Dog.new(:green).bark # => "wruff!"
 }
 ```
 
-# Flow control
+### Flow control
 ```ruby
 computation = -> { expensive }
 computation.if(necessary?)
@@ -84,14 +84,14 @@ computation.if(necessary?)
   .else! { go_to_sleep }
 ```
 
-# Boolean logic
+### Boolean logic
 ```ruby
 false.or { true } # => truthy
 false.and { expensive } # => falsey
 400.and { 20 } # => truthy
 ```
 
-# Case expressions
+### Case expressions
 ```ruby
 x.case
   .when(String) { "It's a string!" }
@@ -100,7 +100,7 @@ x.case
   .else { go_to_sleep } 
 ```
 
-# Raise and handle exceptions
+### Raise and handle exceptions
 ```ruby
 # raises RuntimeError, like `raise "msg"`
 "something's wrong!".raise
@@ -121,7 +121,7 @@ x.case
 }
 ```
 
-# return and yield
+### return and yield
 ```ruby
 :f.def { |x|
   -> { x / 3 }.return_if(x > 10) # guard clause
