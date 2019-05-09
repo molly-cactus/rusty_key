@@ -6,7 +6,7 @@ require_relative '../lib/rusty.rb'
 
 Rusty.using
 
-:StringBuilder.Class {
+:StringBuilder.class {
   :initialize.def { |*strs|
     @string = strs.join.dup
   }

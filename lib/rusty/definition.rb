@@ -17,7 +17,9 @@ module Rusty
       binding.of_caller(1).eval("extend #{self}")
     end
 
-    def Class(&b)
+    alias _class class
+    def class(&b)
+      return _class unless b
       # get context in which we're trying to define our class
       context = binding.of_caller(1).eval('self.class')
       # does a class with this name already exist?
@@ -33,6 +35,7 @@ module Rusty
       end
       nil
     end
+    alias Class class
     alias clazz Class
     alias klass Class
 
@@ -57,9 +60,11 @@ module Rusty
   end
 
   refine Class do
-    def Class(&b)
-      self.class_eval(&b)
+    alias _class class
+    def class(&b)
+      b ? self.class_eval(&b) : _class
     end
+    alias Class class
     alias clazz Class
     alias klass Class
   end
