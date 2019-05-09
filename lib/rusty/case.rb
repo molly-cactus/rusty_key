@@ -1,34 +1,32 @@
 module Rusty
-  module FluentCase
-    refine Object do
-      def case
-        Case.new(self)
-      end
+  refine Object do
+    def case
+      Case.new(self)
+    end
+  end
+
+  private
+
+  class Case
+    def initialize(value)
+      @value = value
+      @found = false
+      @result = -> {}
     end
 
-    private
-
-    class Case
-      def initialize(value)
-        @value = value
-        @found = false
-        @result = -> {}
+    def when(condition, &block)
+      if !@found && condition === @value
+        @found = true
+        @result = block
       end
+      self
+    end
 
-      def when(condition, &block)
-        if !@found && condition === @value
-          @found = true
-          @result = block
-        end
-        self
-      end
-
-      def else(&block)
-        if @found
-          @result&.call(@value)
-        else
-          block&.call(@value)
-        end
+    def else(&block)
+      if @found
+        @result&.call(@value)
+      else
+        block&.call(@value)
       end
     end
   end
