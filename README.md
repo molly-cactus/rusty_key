@@ -14,6 +14,14 @@ I have nothing but respect for the Rust Lang Team's work, and their proposal reg
 
 Don't?
 
+## Acknowledgements
+
+I'd like to thank:
+
+* John Mair, whose [binding_of_caller gem](https://github.com/banister/binding_of_caller), released under the MIT license, makes all this possible.
+* The Rust Lang Team, who do great work and inspire terrible jokes.
+* Matz, who will hopefully not ban me from using Ruby for releasing this.
+
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/smoochbot/rusty. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
