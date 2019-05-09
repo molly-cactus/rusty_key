@@ -50,7 +50,7 @@ Below are some things you can do, but it's not an exhaustive list. Consider usin
   # stuff
 }
 ```
-# alias, include, extend, using
+# using, alias, include, extend
 ```ruby
 :Rusty.using
 ```
@@ -69,7 +69,8 @@ Below are some things you can do, but it's not an exhaustive list. Consider usin
 
 # Flow control
 ```ruby
--> { expensive() }.if(necessary?)
+computation = -> { expensive() }
+computation.if(necessary?)
   .else_if(cheap_check) { one_thing() }
   .elsif(-> { expensive_check }) { another_thing() }
   .else! { go_to_sleep() }
@@ -92,6 +93,10 @@ x.case
 
 # Raise and handle exceptions
 ```ruby
+# raises RuntimeError, like `raise "msg"`
+"something's wrong!".raise
+```
+```ruby
 -> {
   ArgumentError.new("no arguing!").raise
 }.rescue(OtherError, DifferentError) { |e|
@@ -103,10 +108,6 @@ x.case
 }.ensure! {
   puts "Thank you for following the rules."
 }
-```
-```ruby
-# raises RuntimeError, like `raise "msg"`
-"something's wrong!".raise
 ```
 
 # return and yield
@@ -126,7 +127,7 @@ x.case
 
 * Nested classes (and possibly other nested things) don't work.
 * There's no replacement for `refine`.
-* for `#if` and `#elsif`/`#else_if`, wrap conditions in procs or they will always get evaluated.
+* for `#elsif`/`#else_if`, wrap conditions in procs or they will always get evaluated.
 * Specifically the class `Module` can't be monkey patched this way, or at least it couldn't at some point. Haven't tested that in a while.
 * Speaking of which: There are no automated tests. I didn't think this would continue to the point where I might need them; I was wrong.
 * Use return_if and return_unless for conditional returns (e.g. guard clauses) unless you're very comfortable with the difference in semantics between regular procs and lambdas.
