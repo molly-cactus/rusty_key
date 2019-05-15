@@ -16,9 +16,7 @@ Don't?
 
 If you really want to, get it like this:
 
-```bash
-gem install rusty_key
-```
+  $ gem install rusty_key
 
 Then start with this:
 
