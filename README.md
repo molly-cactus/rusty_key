@@ -33,11 +33,15 @@ Below are some things you can do, but it's probably not an exhaustive list. Cons
 :add_two.def { |x, y|
   x + y
 }
+
+add_two(3, 4) # => 7
 ```
 ```ruby
 :add_many.def { |*xs|
   xs.reduce(0, :+)
 }
+
+add_many(1, 1, 2, 3, 5, 8, 13) # => 33
 ```
 ```ruby
 :foo.def { |x, y, *zs, key: value, &block|
