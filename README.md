@@ -30,6 +30,16 @@ Below are some things you can do, but it's probably not an exhaustive list. Cons
 
 ### Define methods
 ```ruby
+:add_two.def { |x, y|
+  x + y
+}
+```
+```ruby
+:add_many.def { |*xs|
+  xs.reduce(0, :+)
+}
+```
+```ruby
 :foo.def { |x, y, *zs, key: value, &block|
   # stuff
 }
@@ -39,15 +49,16 @@ Below are some things you can do, but it's probably not an exhaustive list. Cons
 ```ruby
 :Dog.class {
   :initialize.def { |color|
-    # stuff
+    @color = color
   }
 
   :bark.def {
-    "wruff!"
+    "#{@color.capitalize} dog says: wruff!"
   }
 }
 
-Dog.new(:green).bark # => "wruff!"
+Dog.new(:green).bark
+# => "Green dog says: wruff!"
 ```
 
 ### Define and monkey patch modules
