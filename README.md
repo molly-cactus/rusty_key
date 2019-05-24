@@ -109,7 +109,7 @@ false.and { expensive } # => falsey
 x.case
   .when(String) { "It's a string!" }
   .when(0..10) { "Pretty small..." }
-  .when(-> y { y.respond_to? :phone }) { "Hello? }
+  .when(-> y { y.respond_to? :phone }) { "Hello?" }
   .else { go_to_sleep } 
 ```
 
