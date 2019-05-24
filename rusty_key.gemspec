@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Margaret K. Geiger"]
   spec.email         = ["mkg@fastmail.com"]
 
-  spec.summary       = %q{Replaces keywords with method calls. Not for serious use.}
+  spec.summary       = %q{Replaces keywords (and some Kernel methods) with explicit-receiver method calls. Not for serious use.}
   spec.homepage      = "https://github.com/smoochbot/rusty_key"
   spec.license       = "Public Domain"
 
