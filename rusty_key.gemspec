@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["mkg@fastmail.com"]
 
   spec.summary       = %q{Replaces keywords (and some Kernel methods) with explicit-receiver method calls. Not for serious use.}
-  spec.homepage      = "https://github.com/smoochbot/rusty_key"
+  spec.homepage      = "https://github.com/molly-cactus/rusty_key"
   spec.license       = "Public Domain"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
